@@ -34,7 +34,7 @@ cacheSolve <- function(x, ...) {
         message("No cached data!")
         ## Fetch the raw matrix and calculate the inverse
         ma <- x$get()
-        i <- solve(ma)
+        i <- solve(ma, ...)
         ## Cache the calculated inverse
         x$setInverse(i)
     }
